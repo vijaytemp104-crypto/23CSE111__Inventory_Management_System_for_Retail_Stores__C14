@@ -37,24 +37,47 @@ g++ main.cpp -o inventory
 
 ## Sample Input / Output
 
-### Sample Input
+### Add Product
+
+Input:
 
 ```text
-1
-Add Product
-Product Name: Rice
-Quantity: 50
-Price: 60
+Product ID: 10
+Product Name: Soya Sticks
+Price: 125
+Quantity: 10
 ```
 
-### Sample Output
+Output:
 
 ```text
-Product added successfully.
-Current Stock: 50
+Product added successfully!
 ```
 
----
+### Sell Product
+
+Input:
+
+```text
+Product ID: 10
+Quantity to Sell: 6
+```
+
+Output:
+
+```text
+Sale successful!
+WARNING: Low stock for Soya Sticks! Only 1 left.
+```
+
+### Export Inventory
+
+Output:
+
+```text
+Inventory exported successfully to output.csv
+```
+
 
 ## Tools & Technologies Used
 
