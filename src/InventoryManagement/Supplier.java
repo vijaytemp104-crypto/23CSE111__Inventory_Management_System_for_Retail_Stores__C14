@@ -22,14 +22,10 @@ public class Supplier extends InventoryEntity {
         return supplierName;
     }
 
-    public void displaySupplier() {
+    @Override
+    public void display() {
         System.out.println("Supplier ID: " + supplierId);
         System.out.println("Supplier Name: " + supplierName);
         System.out.println("--------------------");
-    }
-
-    @Override
-    public void display() {
-        displaySupplier();
     }
 }
