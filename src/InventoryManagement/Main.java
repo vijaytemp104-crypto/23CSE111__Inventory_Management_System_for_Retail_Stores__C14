@@ -7,13 +7,6 @@ public class Main {
 
         Inventory inventory = new Inventory();
         Scanner sc = new Scanner(System.in);
-
-        inventory.addProduct(1, "Rice 5kg", 285.00, 50);
-        inventory.addProduct(2, "Sunflower Oil 1L", 135.00, 30);
-        inventory.addProduct(3, "Wheat Flour", 60.00, 3);
-        inventory.addProduct(4, "Toor Dal", 95.00, 20);
-        inventory.addProduct(5, "Sugar 1kg", 42.00, 2);
-
         int choice = -1;
 
         while (choice != 0) {

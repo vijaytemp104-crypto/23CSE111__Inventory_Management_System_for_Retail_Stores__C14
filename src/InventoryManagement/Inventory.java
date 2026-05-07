@@ -127,7 +127,7 @@ public class Inventory {
 
         FileWriter fw = new FileWriter(fileName);
 
-        // write header row
+        // writes the header row in tyhe csv
         fw.write("Product ID,Name,Price,Quantity\n");
 
         // write each product as a row
