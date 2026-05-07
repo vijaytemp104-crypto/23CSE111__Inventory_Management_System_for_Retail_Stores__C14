@@ -1,4 +1,4 @@
-package InventoryManagement;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -6,7 +6,16 @@ public class Main {
     public static void main(String[] args) {
 
         Inventory inventory = new Inventory();
+        Supplier supplier = null;
         Scanner sc = new Scanner(System.in);
+
+        // adding some sample products to start with
+        inventory.addProduct(1, "Rice 5kg", 285.00, 50);
+        inventory.addProduct(2, "Sunflower Oil 1L", 135.00, 30);
+        inventory.addProduct(3, "Wheat Flour", 60.00, 3);
+        inventory.addProduct(4, "Toor Dal", 95.00, 20);
+        inventory.addProduct(5, "Sugar 1kg", 42.00, 2);
+
         int choice = -1;
 
         while (choice != 0) {
@@ -22,12 +31,14 @@ public class Main {
             System.out.println("9.  Show Low Stock");
             System.out.println("10. Show Inventory Value");
             System.out.println("11. Export Inventory to CSV");
+            System.out.println("12. Add Supplier");
+            System.out.println("13. Display Supplier");
             System.out.println("0.  Exit");
             System.out.println("========================================");
             System.out.print("Enter choice: ");
 
             choice = sc.nextInt();
-            sc.nextLine();
+            sc.nextLine(); // consume leftover newline
 
             switch (choice) {
 
@@ -108,6 +119,7 @@ public class Main {
                 case 10:
                     inventory.showInventoryValue();
                     break;
+
                 case 11:
                     System.out.print("Enter file name (e.g. inventory.csv): ");
                     String csvFile = sc.nextLine();
@@ -117,7 +129,21 @@ public class Main {
                         System.out.println("Failed to export: " + e.getMessage());
                     }
                     break;
-
+                case 12:
+                    System.out.println("Enter supplier id : ");
+                    int supplierID = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Enter supplier name :");
+                    String supplierName = sc.nextLine();
+                    supplier = new Supplier(supplierID,supplierName);
+                    break;
+                case 13:
+                    try{
+                        supplier.display();
+                    } catch (Exception e) {
+                        System.out.println("Please add a supplier first");
+                    }
+                    break;
                 case 0:
                     System.out.println("Exiting... Goodbye!");
                     break;

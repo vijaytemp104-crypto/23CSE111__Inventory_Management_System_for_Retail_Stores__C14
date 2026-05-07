@@ -53,17 +53,13 @@ public class Product extends InventoryEntity implements Alertable {
         this.quantity = quantity;
     }
 
-    public void displayProduct() {
+    @Override
+    public void display() {
         System.out.println("Product ID: " + id);
         System.out.println("Name: " + name);
         System.out.println("Price: " + price);
         System.out.println("Quantity: " + quantity);
-        System.out.println("--------------------");
-    }
-
-    @Override
-    public void display() {
-        displayProduct();
+        System.out.println("--------------------");        
     }
 
     @Override
