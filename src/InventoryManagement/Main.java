@@ -1,4 +1,4 @@
-import java.sql.SQLOutput;
+package InventoryManagement;
 import java.util.Scanner;
 
 public class Main {
