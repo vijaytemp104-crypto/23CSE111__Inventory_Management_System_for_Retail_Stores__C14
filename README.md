@@ -5,10 +5,10 @@
 | Name          | Role                    |
 
 | Nayanteerth Akhil | -Phase 2 + code |
-| Ayush Kushwaha | Phase 1 + code   |
+| Ayush Kushwaha | Github Host + code   |
 | Varun Nagnath Lokare | Code / Src   |
 | Tejas Shrivastava | Code / Src     |
-| M. Manjunadha | Code + Github Host |
+| M. Manjunadha | Code + Phase 1 |
 
 ---
 
